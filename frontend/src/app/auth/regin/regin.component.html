@@ -1,0 +1,105 @@
+<!-- <div class="container">
+   <div class="main_block">
+      <a [routerLink]="['']">
+         <img src="../../../assets/img/logo.png" alt="" class="logo_neimark">
+      </a>
+      <div class="form_auth_block">
+         <div class="form_auth_block_content">
+            <p class="form_auth_block_head_text">Регистрация</p>
+            <form class="form_auth_style" action="#" method="post">
+               <input type="name" class="input_form" name="auth_name" placeholder="Имя" required [(ngModel)]="name">
+               <input type="name" class="input_form" name="auth_name" placeholder="Фамилия" required [(ngModel)]="fname">
+               <input type="name" class="input_form" name="auth_name" placeholder="Отчетсво" required [(ngModel)]="oname">
+               <input type="name" class="input_form" name="auth_name" placeholder="Должность" required [(ngModel)]="post">
+               <input type="name" class="input_form" name="auth_name" placeholder="Почта" required [(ngModel)]="email">
+               <input type="password" class="input_form" name="auth_pass" placeholder="Пароль" required [(ngModel)]="pas">
+               <div class="block_btn">
+                  <button class="form_auth_button" type="submit" name="form_auth_submit" (click)="register()">Зарегистрироваться</button>
+               </div>
+
+            </form>
+         </div>
+      </div>
+      <div class="hyperlink_to_password">
+         <p>Уже есть аккаунт?&nbsp;</p>
+         <a [routerLink]="['', 'auth']" class="password_">Войдите</a>
+      </div>
+   </div>
+</div> -->
+
+
+
+<div class="mn-vh-100 d-flex align-items-center">
+   <div class="container">
+       <!-- Card -->
+       <div class="card justify-content-center auth-card">
+           <div class="row justify-content-center">
+               <div class="col-xl-10">
+                   <h4 class="mb-5 font-20">Регистрация</h4>
+
+                   <div>
+                       <div class="row">
+                           <div class="col-lg-6">
+                               <!-- Form Group -->
+                               <div class="form-group mb-20">
+                                   <label for="f_name" class="mb-2 font-14 bold black">Имя</label>
+                                   <input type="text" id="f_name" class="theme-input-style" placeholder="Имя" required [(ngModel)]="name">
+                               </div>
+                               <!-- End Form Group -->
+                           </div>
+
+                           <div class="col-lg-6">
+                               <!-- Form Group -->
+                               <div class="form-group mb-20">
+                                   <label for="l_name" class="mb-2 font-14 bold black">Фамилия</label>
+                                   <input type="text" id="l_name" class="theme-input-style" placeholder="Фамилия" required [(ngModel)]="fname">
+                               </div>
+                               <!-- End Form Group -->
+                           </div>
+
+                           <div class="col-lg-6">
+                               <!-- Form Group -->
+                               <div class="form-group mb-20">
+                                   <label for="u_name" class="mb-2 font-14 bold black">Отчетсво</label>
+                                   <input type="text" id="u_name" class="theme-input-style" placeholder="Отчетсво" required [(ngModel)]="oname">
+                               </div>
+                               <!-- End Form Group -->
+                           </div>
+
+                           <div class="col-lg-6">
+                               <!-- Form Group -->
+                               <div class="form-group mb-20">
+                                   <label for="email" class="mb-2 font-14 bold black">Email</label>
+                                   <input type="email" id="email" class="theme-input-style" placeholder="Логин" required [(ngModel)]="email">
+                               </div>
+                               <!-- End Form Group -->
+                           </div>
+
+                           <div class="col-lg-6">
+                               <!-- Form Group -->
+                               <div class="form-group mb-20">
+                                   <label for="password" class="mb-2 font-14 bold black">Пароль</label>
+                                   <input type="password" id="password" class="theme-input-style" placeholder="Пароль" required [(ngModel)]="pas">
+                               </div>
+                               <!-- End Form Group -->
+                           </div>
+
+                           <!-- <div class="col-lg-6">
+                               <div class="form-group mb-20">
+                                   <label for="r_password" class="mb-2 font-14 bold black">Retype Password</label>
+                                   <input type="password" id="r_password" class="theme-input-style" placeholder="Password">
+                               </div>
+                           </div> -->
+                       </div>
+
+                       <div class="d-flex align-items-center pt-4">
+                           <button type="submit" (click)="register()" class="btn long mr-20">Зарегистрироваться</button>
+                           <span class="font-12 d-block"><a [routerLink]="['', 'auth']" class="bold">Войти</a></span>
+                       </div>
+                     </div>
+               </div>                                    
+           </div>
+       </div>
+       <!-- End Card -->
+   </div>
+</div>

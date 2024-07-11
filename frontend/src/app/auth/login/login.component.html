@@ -1,0 +1,83 @@
+<!-- <div class="container">
+   <div class="main_block">
+      <a [routerLink]="['']">
+         <img src="../../../assets/img/logo.png" alt="" class="logo_neimark">
+      </a>
+      <div class="form_auth_block">
+         <div class="form_auth_block_content">
+            <p class="form_auth_block_head_text">Вход</p>
+            <form class="form_auth_style" action="#" method="post">
+               <input type="email" class="input_form" name="auth_email" placeholder="Почта: admin@mail.ru" required [(ngModel)]="login">
+
+               <input type="password" class="input_form" name="auth_pass" placeholder="Пароль: qwerty123" required [(ngModel)]="pas">
+               <div class="block_btn">
+                  <button class="form_auth_button" type="submit" name="form_auth_submit" (click)="auth()">Войти</button>
+               </div>
+
+            </form>
+         </div>
+      </div>
+      <div class="hyperlink_to_password">
+         <p>Забыли&nbsp; </p>
+         <a href="" class="password_">пароль?</a>
+      </div>
+      <div class="hyperlink_to_password">
+         <p>Нету аккаунта? </p>
+         <a [routerLink]="['', 'registration']" class="password_"> &nbsp; Зарегистрируйтесь</a>
+      </div>
+   </div>
+</div> -->
+<div class="mn-vh-100 d-flex align-items-center">
+   <div class="container">
+       <!-- Card -->
+       <div class="card justify-content-center auth-card">
+           <div class="row justify-content-center">
+               <div class="col-xl-7 col-lg-9">
+                   <h4 class="mb-5 font-20">Аутентификация</h4>
+
+                   <div>
+                       <!-- Form Group -->
+                       <div class="form-group mb-20">
+                           <label for="email" class="mb-2 font-14 bold black">Email</label>
+                           <input required [(ngModel)]="login" type="text" id="email" class="theme-input-style" placeholder="Email Address">
+                       </div>
+                       <!-- End Form Group -->
+                       
+                       <!-- Form Group -->
+                       <div class="form-group mb-20">
+                           <label for="password" class="mb-2 font-14 bold black">Пароль</label>
+                           <input required [(ngModel)]="pas" type="password" id="password" class="theme-input-style" placeholder="********">
+                       </div>
+                       <!-- End Form Group -->
+
+                       <div class="d-flex justify-content-between mb-20">
+                           <div class="d-flex align-items-center">
+                               <!-- Custom Checkbox -->
+                               <label class="custom-checkbox position-relative mr-2">
+                                   <input type="checkbox" id="checkbox">
+                                   <span class="checkmark"></span>
+                               </label>
+                               <!-- End Custom Checkbox -->
+                               
+                               <label for="checkbox" class="font-14">Запомнить меня</label>
+                           </div>
+
+                           <a href="forget-pass.html" class="font-12 text_color">Забыли пароль?</a>
+                       </div>
+
+                       <!-- <div class="mb-30">
+                           <a href="#" class="light-btn mr-3 mb-20">Log In With Facebook</a>
+                           <a href="#" class="light-btn style--two mb-20">Log In With Gmail</a>
+                       </div> -->
+
+                       <div class="d-flex align-items-center">
+                           <button type="submit" (click)="auth()" class="btn long mr-20">Войти</button>
+                           <span class="font-12 d-block"><a [routerLink]="['', 'registration']" class="bold">Зарегистрируйтесь</a>,Если у вас нет аккаунта.</span>
+                       </div>
+                     </div>
+               </div>                                    
+           </div>
+       </div>
+       <!-- End Card -->
+   </div>
+</div>

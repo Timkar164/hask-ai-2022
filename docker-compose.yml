@@ -1,0 +1,43 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: postgres:12-alpine
+    env_file:
+       - postgres.env
+    volumes:
+      - postgres:/data/postgres
+      - ./airflow/scripts/postgres/:/docker-entrypoint-initdb.d/
+ 
+  server:
+    image: airflow2-docker:1.0.0
+    env_file:
+       - ./airflow/airflow.env
+       - ./airflow/airflow_db.env
+    ports:
+      - "8080:8080"
+    volumes:
+       - ./airflow/dags:/opt/airflow/dags
+    depends_on:
+       - postgres
+   
+  backend:
+    build: ./backend
+    ports:
+      - 8711:8711
+    expose:
+      - 8711
+    command: python app.py
+
+
+  frontend:
+    build: ./frontend
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
+    depends_on:
+      - backend
+    command: node app.js
+volumes:
+    postgres:
